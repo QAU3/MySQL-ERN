@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import './App.css';
 
 class App extends React.Component {
   constructor(prop) {
@@ -10,7 +9,7 @@ class App extends React.Component {
     };
   }
   componentDidMount() {
-    axios.get('http://localhost:5000').then((res) => {
+    axios.get('http://127.0.0.1:5000/novice').then((res) => {
       console.log(res);
       this.setState({
         data: res.data,
@@ -18,7 +17,7 @@ class App extends React.Component {
     });
   }
   render() {
-    return <h1>{this.state.hola}</h1>;
+    return <h1>{this.state.data}</h1>;
   }
 }
 

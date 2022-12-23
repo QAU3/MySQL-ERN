@@ -1,10 +1,10 @@
 const mysql = require('mysql2');
 
 const conn = mysql.createConnection({
-  host: 'sql7.freemysqlhosting.net',
-  user: 'sql7585207',
-  password: '57gPL4IvyR',
-  database: 'sql7585207',
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_DATABASE,
 });
 
 let dataPool = {};
@@ -84,5 +84,6 @@ conn.connect((err) => {
   }
   console.log('Connection established');
 });
+
 
 module.exports = dataPool;

@@ -2,7 +2,7 @@ const express = require('express');
 const users = express.Router();
 const DB = require('../DB/dbConn.js');
 
-//Checks if user submited both fields, if user exist and if the combiation of user and password matches
+//Checks if user submitted both fields, if user exist and if the combination of user and password matches
 users.post('/login', async (req, res) => {
   var username = req.body.username;
   var password = req.body.password;
@@ -22,7 +22,7 @@ users.post('/login', async (req, res) => {
           console.log('INCORRECT PASSWORD');
         }
       } else {
-        console.log('USER NOT REGISTRED');
+        console.log('USER NOT REGISTERED');
       }
     } catch (err) {
       console.log(err);
