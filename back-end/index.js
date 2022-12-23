@@ -11,8 +11,9 @@ const users = require('./routes/users');
 //Some configurations
 app.use(express.urlencoded({extended : true}));
 app.use(cors({
-  origin:["http://127.0.0.1:3000"],
+  origin:["https://qau3-super-duper-guacamole-697pqjvjxr5f5q9v-3000.preview.app.github.dev"],
   methods:["GET", "POST"],
+  preflightContinue: false,
   credentials:true
 }))
 

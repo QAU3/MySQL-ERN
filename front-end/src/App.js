@@ -9,7 +9,8 @@ class App extends React.Component {
     };
   }
   componentDidMount() {
-    axios.get('http://127.0.0.1:5000/novice').then((res) => {
+    axios.get('https://qau3-super-duper-guacamole-697pqjvjxr5f5q9v-5000.preview.app.github.dev/novice', {credentials: 'include'})
+    .then((res) => {
       console.log(res);
       this.setState({
         data: res.data,
@@ -17,7 +18,7 @@ class App extends React.Component {
     });
   }
   render() {
-    return <h1>{this.state.data}</h1>;
+    return <h1>Hello</h1>;
   }
 }
 
